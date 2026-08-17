@@ -1,0 +1,23 @@
+{
+  "productName": "TestApp",
+  "entry": "index.html",
+  "width": 1200,
+  "height": 800,
+  "minWidth": 400,
+  "minHeight": 300,
+  "resizable": true,
+  "fullscreen": false,
+  "maximized": false,
+  "frameless": false,
+  "showMenuBar": false,
+  "rememberWindowState": true,
+  "backgroundColor": "#ffffff",
+  "singleInstance": true,
+  "tray": false,
+  "minimizeToTray": false,
+  "fileApi": true,
+  "externalLinksInBrowser": true,
+  "devTools": false,
+  "spaFallback": false,
+  "zoomEnabled": true
+}

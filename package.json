@@ -1,0 +1,62 @@
+{
+  "name": "testapp",
+  "version": "1.0.0",
+  "description": "由 WebApp Packer 生成",
+  "main": "main.js",
+  "author": "WebApp Packer",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "start": "electron .",
+    "pack:win": "electron-builder --win --x64",
+    "pack:mac": "electron-builder --mac",
+    "pack:linux": "electron-builder --linux"
+  },
+  "devDependencies": {
+    "electron": "33.2.1",
+    "electron-builder": "25.1.8"
+  },
+  "build": {
+    "appId": "com.webapp.testapp",
+    "productName": "TestApp",
+    "files": [
+      "main.js",
+      "preload.js",
+      "app-config.json",
+      "www/**/*",
+      "assets/**/*",
+      "build/icon.png",
+      "build/icon.ico",
+      "package.json"
+    ],
+    "directories": {
+      "output": "dist"
+    },
+    "publish": null,
+    "npmRebuild": false,
+    "electronDownload": {
+      "cache": "~/.cache/electron"
+    },
+    "asar": true,
+    "win": {
+      "target": [
+        "portable"
+      ],
+      "icon": "build/icon.png"
+    },
+    "mac": {
+      "target": [
+        "dmg"
+      ],
+      "category": "public.app-category.productivity",
+      "icon": "build/icon.png"
+    },
+    "linux": {
+      "target": [
+        "AppImage"
+      ],
+      "category": "Utility",
+      "icon": "build/icon.png"
+    }
+  }
+}

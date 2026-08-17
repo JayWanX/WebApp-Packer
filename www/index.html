@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WebApp Packer 测试</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <h1>WebApp Packer 测试页</h1>
+    <p class="lede">这是一个用于验证打包流程的离线网页。</p>
+
+    <section class="card">
+      <h2>运行时信息</h2>
+      <button id="btnInfo">读取 desktopAPI 信息</button>
+      <pre id="info"></pre>
+    </section>
+
+    <section class="card">
+      <h2>本地文件 API</h2>
+      <div class="row">
+        <button id="btnSave">保存文本到本地…</button>
+        <button id="btnOpen">从本地打开文本…</button>
+        <button id="btnDir">选择目录…</button>
+      </div>
+      <pre id="fs"></pre>
+    </section>
+
+    <section class="card">
+      <h2>持久化存储</h2>
+      <div class="row">
+        <input type="text" id="storeKey" placeholder="key" value="greeting" />
+        <input type="text" id="storeVal" placeholder="value" value="hello from electron" />
+        <button id="btnStoreSet">写入</button>
+        <button id="btnStoreGet">读取</button>
+      </div>
+      <pre id="store"></pre>
+    </section>
+
+    <section class="card">
+      <h2>外部链接</h2>
+      <p>点击下面的链接应唤起系统浏览器，而不是在应用内跳转：</p>
+      <a href="https://github.com" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://godotengine.org" target="_blank" rel="noopener">Godot Engine</a>
+    </section>
+
+    <footer>
+      <p>WebApp Packer · 端到端验证</p>
+    </footer>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>

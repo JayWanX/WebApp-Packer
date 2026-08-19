@@ -1,0 +1,33 @@
+{
+  "name": "webapp-packer",
+  "version": "1.0.0",
+  "description": "将离线网页目录打包为 Windows / macOS / Linux 桌面应用",
+  "main": "src/main/index.js",
+  "author": "WebApp Packer",
+  "license": "MIT",
+  "scripts": {
+    "start": "electron .",
+    "pack": "node src/cli.js",
+    "dist": "electron-builder --win portable"
+  },
+  "dependencies": {
+    "electron-builder": "25.1.8"
+  },
+  "devDependencies": {
+    "electron": "33.2.1",
+    "http-proxy-agent": "7.0.1"
+  },
+  "overrides": {
+    "http-proxy-agent": "7.0.1"
+  },
+  "build": {
+    "appId": "com.webapp.packer",
+    "productName": "WebApp Packer",
+    "files": [
+      "src/**/*"
+    ],
+    "win": {
+      "target": "portable"
+    }
+  }
+}

@@ -34,6 +34,7 @@ jobs:
       - name: Build (${{ matrix.os }})
         env:
           CSC_IDENTITY_AUTO_DISCOVERY: "false"
+        shell: bash
         run: |
           npm ci
           if [ "${{ matrix.os }}" = "windows-latest" ]; then
